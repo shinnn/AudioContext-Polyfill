@@ -1,0 +1,8 @@
+env:
+- DISPLAY=:99.0
+before_script:
+- sh -e /etc/init.d/xvfb start
+- sh .travis/scripts/install_chrome.sh
+language: node_js
+node_js:
+  - 0.8

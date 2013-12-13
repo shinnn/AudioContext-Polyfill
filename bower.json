@@ -15,9 +15,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
     "test",
-    "Gruntfile.coffee",
-    "testem.json"
+    "coverage"
   ]
 }

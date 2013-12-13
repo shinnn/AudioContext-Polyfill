@@ -8,7 +8,7 @@ Polyfill for `AudioContext` object on Web Audio API
 
 Via [Bower](http://bower.io/).
 
-`bower install audiocontext-polyfill`
+`bower install --save audiocontext-polyfill`
 
 Or add `audiocontext-polyfill` to your app's `bower.json`.
 
