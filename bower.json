@@ -1,0 +1,23 @@
+{
+  "name": "audiocontext-polyfill",
+  "version": "0.0.1",
+  "description": "Polyfill for 'AudioContext' object on Web Audio API",
+  "keywords": [
+    "web audio",
+    "polyfill"
+  ],
+  "main": "audiocontext-polyfill.js",
+  "homepage": "https://github.com/shinnn/scrollsmartly",
+  "authors": [
+    "Shinnosuke Watanabe <snnskwtnb@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "Gruntfile.coffee",
+    "testem.json"
+  ]
+}

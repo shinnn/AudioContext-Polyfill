@@ -1,5 +1,7 @@
 # AudioContext-Polyfill
 
+Polyfill for `AudioContext` object on Web Audio API
+
 ## License
 
 Copyright (c) 2013 Shinnosuke Watanabe All rights reserved.

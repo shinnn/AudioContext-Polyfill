@@ -1,7 +1,9 @@
-(function(window, document, undefined){
+(function(window, document){
   'use strict';
   
-  window.AudioContext = window.AudioContext || window.webkitAudioContext;
+  window.AudioContext = window.AudioContext ||
+                        window.webkitAudioContext;
+
   if (AudioContext === undefined) {
     console.warn('Web Audio API is not supported in this browser.\n' +
     'Please launch this site again with Google Chrome.');
