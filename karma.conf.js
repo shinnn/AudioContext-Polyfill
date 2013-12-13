@@ -22,6 +22,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      './node_modules/chai/chai.js',
       'audiocontext-polyfill.js',
       'test/*.js'
     ],
@@ -54,7 +55,7 @@ module.exports = function(config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['Chrome', 'Opera', 'Safari', 'Firefox'],
+    browsers: ['Chrome', 'Safari', 'Firefox', 'Opera'],
 
     // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,
