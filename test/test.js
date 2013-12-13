@@ -61,7 +61,7 @@ describe('new AudioContext()', function() {
 
   describe('#createScriptProcessor()', function() {
     it('should return object', function () {
-      assert.typeOf(ctx.createScriptProcessor(), 'object');
+      assert.typeOf(ctx.createScriptProcessor(256, 1, 1), 'object');
     });
   });
 });

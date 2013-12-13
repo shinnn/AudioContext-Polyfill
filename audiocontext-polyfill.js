@@ -11,8 +11,8 @@
   
   var tmpctx = new AudioContext();
 	
-	// Support alternate names
-	// start (noteOn), stop (noteOff), createGain (createGainNode), etc.
+  // Support alternate names
+  // start (noteOn), stop (noteOff), createGain (createGainNode), etc.
   var isStillOld = function(normative, old){
     return normative === undefined && old !== undefined; 
   };
@@ -33,14 +33,14 @@
   }
   
   // Firefox 24 doesn't support OscilatorNode
-  if(typeof tmpctx.createOscillator === 'function'){
+  if (typeof tmpctx.createOscillator === 'function') {
     var oscProto = tmpctx.createOscillator().constructor.prototype;
   
-    if(isStillOld(oscProto.start, oscProto.noteOn) ||
-    isStillOld(oscProto.stop, oscProto.noteOff)){
+    if (isStillOld(oscProto.start, oscProto.noteOn) ||
+    isStillOld(oscProto.stop, oscProto.noteOff)) {
       var nativeCreateOscillator = Proto.createOscillator;
 
-      Proto.createOscillator = function createOscillator(){
+      Proto.createOscillator = function createOscillator() {
         var returnNode = nativeCreateOscillator.call(this);
         returnNode.start = returnNode.start || returnNode.noteOn;
         returnNode.stop = returnNode.stop || returnNode.noteOff;
@@ -65,23 +65,23 @@
 	
   // Black magic for iOS 
   var is_iOS = (navigator.userAgent.indexOf('like Mac OS X') !== -1);
-  if(is_iOS){
+  if (is_iOS) {
     var NativeAudioContext = AudioContext;
     window.AudioContext = function AudioContext() {
       var audioContext = new NativeAudioContext();
-			
+		
       var body = document.body;
       var tmpsrc = audioContext.createBufferSource();
       var tmpProc = audioContext.createScriptProcessor(256, 1, 1);
-	
+
       body.addEventListener('touchstart', instantProcess, false);
-	
+
       function instantProcess() {
         tmpsrc.start(0);
         tmpsrc.connect(tmpProc);
         tmpProc.connect(audioContext.destination);				
       }
-  
+
       // This function will be called once and for all.
       tmpProc.onaudioprocess = function() {
         tmpsrc.disconnect();
@@ -89,7 +89,7 @@
         body.removeEventListener('touchstart', instantProcess, false);
         tmpProc.onaudioprocess = null;
       };
-			
+		
       return audioContext;
     };
   }

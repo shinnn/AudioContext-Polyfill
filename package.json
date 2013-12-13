@@ -1,6 +1,6 @@
 {
   "name": "AudioContext-Polyfill",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Polyfill for 'AudioContext' object on Web Audio API",
   "main": "audiocontext-polyfill.js",
   "scripts": {
@@ -18,20 +18,16 @@
   "homepage": "https://github.com/shinnn/AudioContext-Polyfill",
   "devDependencies": {
     "mocha": "~1.15.1",
-    "karma-script-launcher": "~0.1.0",
-    "karma-chrome-launcher": "~0.1.1",
-    "karma-html2js-preprocessor": "~0.1.0",
-    "karma-firefox-launcher": "~0.1.2",
-    "karma-jasmine": "~0.1.4",
-    "karma-coffee-preprocessor": "~0.1.1",
-    "requirejs": "~2.1.9",
-    "karma-requirejs": "~0.2.0",
-    "karma-phantomjs-launcher": "~0.1.1",
     "karma": "~0.10.8",
     "karma-mocha": "~0.1.1",
+    "karma-chai": "0.0.2",
+    "karma-coverage": "~0.1.4",
+    "karma-script-launcher": "~0.1.0",
+    "karma-chrome-launcher": "~0.1.1",
+    "karma-firefox-launcher": "~0.1.2",
     "karma-opera-launcher": "~0.1.0",
     "karma-safari-launcher": "~0.1.1",
-    "karma-coverage": "~0.1.4",
-    "chai": "~1.8.1"
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-coffee-preprocessor": "~0.1.1"
   }
 }

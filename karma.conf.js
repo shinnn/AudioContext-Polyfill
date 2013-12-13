@@ -9,7 +9,7 @@ module.exports = function(config) {
     basePath: '',
 
     // frameworks to use
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'chai'],
     
     preprocessors: {
       'audiocontext-polyfill.js': ['coverage']
@@ -22,7 +22,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      './node_modules/chai/chai.js',
       'audiocontext-polyfill.js',
       'test/*.js'
     ],
