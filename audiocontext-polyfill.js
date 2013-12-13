@@ -4,11 +4,6 @@
   window.AudioContext = window.AudioContext ||
                         window.webkitAudioContext;
 
-  if (AudioContext === undefined) {
-    console.warn('Web Audio API is not supported in this browser.\n' +
-    'Please launch this site again with Google Chrome.');
-  }
-  
   window.OfflineAudioContext = window.OfflineAudioContext ||
                                window.webkitOfflineAudioContext;
   
@@ -41,7 +36,8 @@
   if(typeof tmpctx.createOscillator === 'function'){
     var oscProto = tmpctx.createOscillator().constructor.prototype;
   
-    if(isStillOld(oscProto.start, oscProto.noteOn) || isStillOld(oscProto.stop, oscProto.noteOff)){
+    if(isStillOld(oscProto.start, oscProto.noteOn) ||
+    isStillOld(oscProto.stop, oscProto.noteOff)){
       var nativeCreateOscillator = Proto.createOscillator;
 
       Proto.createOscillator = function createOscillator(){
@@ -54,13 +50,11 @@
     }
   }
   
-  if (Proto.createGain === undefined &&
-  Proto.createGainNode !== undefined) {
+  if (Proto.createGain === undefined && Proto.createGainNode !== undefined) {
     Proto.createGain = Proto.createGainNode;
   }
 
-  if (Proto.createDelay === undefined &&
-  Proto.createDelayNode !== undefined) {
+  if (Proto.createDelay === undefined && Proto.createDelayNode !== undefined) {
     Proto.createDelay = Proto.createGainNode;
   }
   
@@ -73,23 +67,14 @@
   var is_iOS = (navigator.userAgent.indexOf('like Mac OS X') !== -1);
   if(is_iOS){
     var NativeAudioContext = AudioContext;
-    this.AudioContext = function() {
+    window.AudioContext = function AudioContext() {
       var audioContext = new NativeAudioContext();
 			
       var body = document.body;
       var tmpsrc = audioContext.createBufferSource();
       var tmpProc = audioContext.createScriptProcessor(256, 1, 1);
 	
-      var initialEvent;
-      if (body.ontouchstart !== undefined) {
-        initialEvent = 'touchstart';
-      } else if(body.onmousedown !== undefined) {
-        initialEvent = 'mousedown';
-      } else {
-        initialEvent = 'click';
-      }
-	
-      body.addEventListener(initialEvent, instantProcess, false);
+      body.addEventListener('touchstart', instantProcess, false);
 	
       function instantProcess() {
         tmpsrc.start(0);
@@ -101,7 +86,7 @@
       tmpProc.onaudioprocess = function() {
         tmpsrc.disconnect();
         tmpProc.disconnect();
-        body.removeEventListener(initialEvent, instantProcess, false);
+        body.removeEventListener('touchstart', instantProcess, false);
         tmpProc.onaudioprocess = null;
       };
 			
