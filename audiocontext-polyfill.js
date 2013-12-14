@@ -66,31 +66,31 @@
   // Black magic for iOS 
   var is_iOS = (navigator.userAgent.indexOf('like Mac OS X') !== -1);
   if (is_iOS) {
-    var NativeAudioContext = AudioContext;
+    var OriginalAudioContext = AudioContext;
     window.AudioContext = function AudioContext() {
-      var audioContext = new NativeAudioContext();
+      var iOSCtx = new OriginalAudioContext();
 		
       var body = document.body;
-      var tmpsrc = audioContext.createBufferSource();
-      var tmpProc = audioContext.createScriptProcessor(256, 1, 1);
+      var tmpBuf = iOSCtx.createBufferSource();
+      var tmpProc = iOSCtx.createScriptProcessor(256, 1, 1);
 
       body.addEventListener('touchstart', instantProcess, false);
 
       function instantProcess() {
-        tmpsrc.start(0);
-        tmpsrc.connect(tmpProc);
-        tmpProc.connect(audioContext.destination);				
+        tmpBuf.start(0);
+        tmpBuf.connect(tmpProc);
+        tmpProc.connect(iOSCtx.destination);				
       }
 
       // This function will be called once and for all.
       tmpProc.onaudioprocess = function() {
-        tmpsrc.disconnect();
+        tmpBuf.disconnect();
         tmpProc.disconnect();
         body.removeEventListener('touchstart', instantProcess, false);
         tmpProc.onaudioprocess = null;
       };
 		
-      return audioContext;
+      return iOSCtx;
     };
   }
 }(window, document));

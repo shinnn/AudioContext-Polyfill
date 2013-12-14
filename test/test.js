@@ -4,64 +4,70 @@ var assert = chai.assert;
 var ctx, buf, osc;
 
 describe('new AudioContext()', function() {
-  it('should return object', function () {
+  it("should have 'currentTime' property", function() {
     ctx = new AudioContext();
-    assert.typeOf(ctx, 'object');
+    assert.property(ctx, 'currentTime');
   });
   
   describe('#createBufferSource()', function() {
-    it('should return object', function () {
+    it("should have 'context' property " +
+    "which is equal to its owner AudioContext", function() {
       buf = ctx.createBufferSource();
-      assert.typeOf(buf, 'object');
+      assert.strictEqual(buf.context, ctx);
     });
     
-    describe('#start', function() {
-      it('should return function', function () {
-        assert.typeOf(buf.start, 'function');
+    describe('#start(0)', function() {
+      it('should return undefined', function() {
+        assert.isUndefined(buf.start(0));
       });
     });
 
-    describe('#stop', function() {
-      it('should return function', function () {
-        assert.typeOf(buf.stop, 'function');
+    describe('#stop(0)', function() {
+      it('should return undefined', function() {
+        assert.isUndefined(buf.stop(0));
       });
     });
   });
   
   describe('#createOscillator()', function() {
-    it('should return object', function () {
+    it("should have 'frequency' property and it is object", function() {
       osc = ctx.createOscillator();
-      assert.typeOf(osc, 'object');
+      assert.isObject(osc.frequency);
     });
     
-    describe('#start', function() {
-      it('should return function', function () {
-        assert.typeOf(osc.start, 'function');
+    describe('#start(0)', function() {
+      it('should return undefined', function() {
+        assert.isUndefined(osc.start(0));
       });
     });
 
-    describe('#stop', function() {
-      it('should return function', function () {
-        assert.typeOf(osc.stop, 'function');
+    describe('#stop(0)', function() {
+      it('should return undefined', function() {
+        assert.isUndefined(osc.stop(0));
       });
     });
   });
   
   describe('#createGain()', function() {
-    it('should return object', function () {
-      assert.typeOf(ctx.createGain(), 'object');
+    it("should have 'context' property " +
+    "which is equal to its owner AudioContext", function() {
+      var gain = ctx.createGain();
+      assert.strictEqual(gain.context, ctx);
     });
   });
 
   describe('#createDelay()', function() {
-    it('should return object', function () {
-      assert.typeOf(ctx.createDelay(), 'object');
+    it("should have 'context' property " +
+    "and is equal to its owner AudioContext", function() {
+      var delay = ctx.createDelay();
+      assert.strictEqual(delay.context, ctx);
     });
   });
 
-  describe('#createScriptProcessor()', function() {
-    it('should return object', function () {
-      assert.typeOf(ctx.createScriptProcessor(256, 1, 1), 'object');
+  describe('#createScriptProcessor(256, 1, 1)', function() {
+    it("should have 'bufferSize' property which returns 256", function() {
+      var proc = ctx.createScriptProcessor(256, 1, 1);
+      assert.strictEqual(proc.bufferSize, 256);
     });
   });
 });
