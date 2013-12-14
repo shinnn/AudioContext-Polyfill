@@ -35,8 +35,6 @@ For example, you can create audio context with `new AudioContext()` instead of `
 
 [ctx]: <http://www.w3.org/TR/webaudio/#AudioContext-section>
 [octx]: <http://www.w3.org/TR/webaudio/#OfflineAudioContext-section>
-[start]: <>
-[stop]: <>
 [gain]: <http://www.w3.org/TR/webaudio/#GainNode-section>
 [delay]: <http://www.w3.org/TR/webaudio/#DelayNode-section>
 [proc]: <http://www.w3.org/TR/webaudio/#ScriptProcessorNode>
