@@ -1,6 +1,6 @@
 # AudioContext-Polyfill
 
-Polyfill for `AudioContext` object on [Web Audio API](http://www.w3.org/TR/webaudio/])
+Polyfill for `AudioContext` and its parties on [Web Audio API](http://www.w3.org/TR/webaudio/)
 
 ## Installation
 
@@ -10,7 +10,7 @@ Download via [Bower](http://bower.io/).
 
 `bower install --save audiocontext-polyfill`
 
-Or add `audiocontext-polyfill` to your app's `bower.json`.
+Or add `audiocontext-polyfill` to your app's `bower.json` and run `bower install`.
 
 ```json
 "dependencies": {
@@ -18,15 +18,13 @@ Or add `audiocontext-polyfill` to your app's `bower.json`.
 }
 ```
 
-And run `bower install`.
-
 ### Standalone
 
-Download [ZIP file of this repository.](https://github.com/shinnn/AudioContext-Polyfill/archive/master.zip)
+[Download script file directly.](https://github.com/shinnn/AudioContext-Polyfill/archive/master.zip)
 
 ### Usage
 
-Load `audiocontext-polyfill.js` before any scripts related to the Web Audio API.
+Load `audiocontext-polyfill.js` before any scripts else related to the Web Audio API.
 
 After this script loaded, you can use Web Audio API without any prefixes or deprecated methods.
 
@@ -35,18 +33,26 @@ For example, you can create audio context with `new AudioContext()` instead of `
 
 ### Supported API
 
-| Clean API name       | Prefixed/Deprecated      |
-| -------------------- |:------------------------:|
-| AudioContext         | webkitAudioContext       |
-| OfflineAudioContext  | webkitOfflineAudioContext|
-| start                | noteOn                   |
-| stop                 | noteOff                  |
-| createGain           | createGainNode           |
-| createDelay          | createDelayNode          |
-| createScriptProcessor| createJavaScriptNode     |
+[ctx]: <http://www.w3.org/TR/webaudio/#AudioContext-section>
+[octx]: <http://www.w3.org/TR/webaudio/#OfflineAudioContext-section>
+[start]: <>
+[stop]: <>
+[gain]: <http://www.w3.org/TR/webaudio/#GainNode-section>
+[delay]: <http://www.w3.org/TR/webaudio/#DelayNode-section>
+[proc]: <http://www.w3.org/TR/webaudio/#ScriptProcessorNode>
+
+| Clean API name                | Prefixed/Deprecated      |
+| ----------------------------- | ------------------------ |
+| [AudioContext][ctx]           | webkitAudioContext       |
+| [OfflineAudioContext][octx]   | webkitOfflineAudioContext|
+| start                         | noteOn                   |
+| stop                          | noteOff                  |
+| [createGain][gain]            | createGainNode           |
+| [createDelay][delay]          | createDelayNode          |
+| [createScriptProcessor][proc] | createJavaScriptNode     |
 
 ## License
 
-Copyright (c) 2013 Shinnosuke Watanabe All rights reserved.
+Copyright (c) 2013 [Shinnosuke Watanabe](https://github.com/shinnn) All rights reserved.
 
-Unless otherwise stated, all source code in this repository is licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
+Licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
