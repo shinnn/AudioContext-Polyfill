@@ -15,11 +15,6 @@ module.exports = function(config) {
       'audiocontext-polyfill.js': ['coverage']
     },
     
-    coverageReporter: {
-      type: 'html',
-      dir : 'coverage/'
-    },
-
     // list of files / patterns to load in the browser
     files: [
       'audiocontext-polyfill.js',
@@ -31,7 +26,7 @@ module.exports = function(config) {
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress', 'coverage'],
+    reporters: ['progress'],
 
     // web server port
     port: 9876,
