@@ -1,34 +1,36 @@
 # AudioContext-Polyfill
 
-Polyfill for `AudioContext` and its parties on [Web Audio API](http://www.w3.org/TR/webaudio/)
+Polyfill for `AudioContext` and its parties on [Web Audio API](http://www.w3.org/TR/webaudio/ "Web Audio API W3C Working Draft")
 
 ## Installation
 
 ### Bower
 
-Download via [Bower](http://bower.io/).
+Download via [Bower](http://bower.io/ "BOWER: A package manager for the web").
 
 `bower install --save audiocontext-polyfill`
 
 Or add `audiocontext-polyfill` to your app's `bower.json` and run `bower install`.
 
 ```json
-"dependencies": {
-  "audiocontext-polyfill": "latest"
-}
+{
+  "dependencies": {
+    "audiocontext-polyfill": "latest"
+  }
+{
 ```
 
 ### Standalone
 
-[Download script file directly.](https://github.com/shinnn/AudioContext-Polyfill/archive/master.zip)
+[Download script file directly.](https://raw.github.com/shinnn/AudioContext-Polyfill/master/audiocontext-polyfill.js "view raw")
 
-### Usage
+## Usage
 
 Load `audiocontext-polyfill.js` before any scripts else related to the Web Audio API.
 
 After this script loaded, you can use Web Audio API without any prefixes or deprecated methods.
 
-For example, you can create audio context with `new AudioContext()` instead of `new webkitAudioContext()`, and you can play sound with `.start(0)` instead of old API `.noteOn(0)`.
+For example, you can create audio context with `new AudioContext()` instead of `new webkitAudioContext()`, or play sound with `.start(0)` instead of old API `.noteOn(0)`.
 
 
 ### Supported API

@@ -1,3 +1,9 @@
+/*!
+audiocontext-polyfill.js
+(c) 2013 Shinnosuke Watanabe
+Licensed under the MIT license
+*/
+
 (function(window, document){
   'use strict';
   
