@@ -1,6 +1,6 @@
 {
   "name": "AudioContext-Polyfill",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Polyfill for 'AudioContext' object on Web Audio API",
   "main": "audiocontext-polyfill.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/shinnn/AudioContext-Polyfill",
   "devDependencies": {
-    "mocha": "~1.15.1",
+    "mocha": "~1.16.1",
     "karma": "~0.10.8",
     "karma-mocha": "~0.1.1",
     "karma-chai": "0.0.2",

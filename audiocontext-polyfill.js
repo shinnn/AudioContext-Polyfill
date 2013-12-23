@@ -1,5 +1,5 @@
 /*!
-audiocontext-polyfill.js
+audiocontext-polyfill.js v0.1.0
 (c) 2013 Shinnosuke Watanabe
 Licensed under the MIT license
 */
