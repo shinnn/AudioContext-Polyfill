@@ -4,7 +4,7 @@
   "description": "Polyfill for 'AudioContext' object on Web Audio API",
   "main": "audiocontext-polyfill.js",
   "scripts": {
-    "test": "./node_modules/.bin/karma start --single-run"
+    "test": "./node_modules/karma/bin/karma start --single-run"
   },
   "repository": {
     "type": "git",
