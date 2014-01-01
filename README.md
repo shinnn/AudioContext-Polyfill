@@ -1,5 +1,7 @@
 # AudioContext-Polyfill
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shinnn/audiocontext-polyfill/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 Polyfill for `AudioContext` and its parties on [Web Audio API](http://www.w3.org/TR/webaudio/ "Web Audio API W3C Working Draft")
 
 ## Installation
