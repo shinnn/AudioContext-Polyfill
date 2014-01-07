@@ -1,0 +1,7 @@
+{
+    "esnext": true,
+    "immed": true,
+    "indent": 2,
+    "quotmark": "single",
+    "trailing": true
+}

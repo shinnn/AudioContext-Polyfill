@@ -1,5 +1,6 @@
 # AudioContext-Polyfill
 
+[![devDependency Status](https://david-dm.org/shinnn/Audiocontext-polyfill/dev-status.png)](https://david-dm.org/shinnn/Audiocontext-polyfill#info=devDependencies)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shinnn/audiocontext-polyfill/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Polyfill for `AudioContext` and its parties on [Web Audio API](http://www.w3.org/TR/webaudio/ "Web Audio API W3C Working Draft")
@@ -57,6 +58,6 @@ For example, you can create audio context with `new AudioContext()` instead of `
 
 ## License
 
-Copyright (c) 2013 [Shinnosuke Watanabe](https://github.com/shinnn) All rights reserved.
+Copyright (c) 2013 - 2014 [Shinnosuke Watanabe](https://github.com/shinnn) All rights reserved.
 
 Licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
