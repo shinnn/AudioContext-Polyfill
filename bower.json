@@ -1,10 +1,12 @@
 {
   "name": "audiocontext-polyfill",
   "version": "0.1.0",
-  "description": "Polyfill for 'AudioContext' object on Web Audio API",
+  "description": "Polyfill for 'AudioContext' object of Web Audio API",
   "keywords": [
     "web audio",
-    "polyfill"
+    "polyfill",
+    "compatibilization",
+    "prototype"
   ],
   "main": "audiocontext-polyfill.js",
   "homepage": "https://github.com/shinnn/scrollsmartly",
