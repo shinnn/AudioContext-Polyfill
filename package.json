@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/shinnn/AudioContext-Polyfill",
   "devDependencies": {
-    "mocha": "~1.16.2",
     "karma": "~0.11.12",
     "karma-mocha": "~0.1.1",
     "karma-chai": "0.0.2",
