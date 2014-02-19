@@ -1,5 +1,6 @@
 # AudioContext-Polyfill
 
+[![Bower version](https://badge.fury.io/bo/audiocontext-polyfill.png)](http://badge.fury.io/bo/audiocontext-polyfill)
 [![devDependency Status](https://david-dm.org/shinnn/Audiocontext-polyfill/dev-status.png)](https://david-dm.org/shinnn/Audiocontext-polyfill#info=devDependencies)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/shinnn/audiocontext-polyfill/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
