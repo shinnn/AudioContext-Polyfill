@@ -15,7 +15,7 @@ Download via [Bower](http://bower.io/ "BOWER: A package manager for the web").
 bower install --save audiocontext-polyfill
 ```
 
-Or add `audiocontext-polyfill` to your app's `bower.json` and run `bower install`.
+Or add `audiocontext-polyfill` to the [`bower.json`](http://bower.io/#defining-a-package) of your project and run `bower install`.
 
 ```json
 {
@@ -27,15 +27,15 @@ Or add `audiocontext-polyfill` to your app's `bower.json` and run `bower install
 
 ### Standalone
 
-[Download script file directly.](https://raw.github.com/shinnn/AudioContext-Polyfill/master/audiocontext-polyfill.js "view raw")
+[Download the script file directly.](https://raw.github.com/shinnn/AudioContext-Polyfill/master/audiocontext-polyfill.js "view raw")
 
 ## Usage
 
-Load `audiocontext-polyfill.js` before any scripts else related to the Web Audio API.
+Load `audiocontext-polyfill.js` before any scripts else related to Web Audio API.
 
-After this script loaded, you can use Web Audio API without any prefixes or deprecated methods.
+After it loaded, you can use Web Audio API without any vendor prefixes or deprecated methods.
 
-For example, you can create audio context with `new AudioContext()` instead of `new webkitAudioContext()`, or play sound with `.start(0)` instead of old API `.noteOn(0)`.
+For example, you can create an audio context with `new AudioContext()` instead of `new webkitAudioContext()`, or play sounds with `.start(0)` instead of old API `.noteOn(0)`.
 
 
 ### Supported API
@@ -46,18 +46,18 @@ For example, you can create audio context with `new AudioContext()` instead of `
 [delay]: <http://www.w3.org/TR/webaudio/#DelayNode-section>
 [proc]: <http://www.w3.org/TR/webaudio/#ScriptProcessorNode>
 
-| Clean API name                | Prefixed/Deprecated      |
-| ----------------------------- | ------------------------ |
-| [AudioContext][ctx]           | webkitAudioContext       |
-| [OfflineAudioContext][octx]   | webkitOfflineAudioContext|
-| start                         | noteOn                   |
-| stop                          | noteOff                  |
-| [createGain][gain]            | createGainNode           |
-| [createDelay][delay]          | createDelayNode          |
-| [createScriptProcessor][proc] | createJavaScriptNode     |
+| Clean API name                | deprecated or vendor-prefixed |
+| ----------------------------- | ----------------------------- |
+| [AudioContext][ctx]           | webkitAudioContext            |
+| [OfflineAudioContext][octx]   | webkitOfflineAudioContext     |
+| start                         | noteOn                        |
+| stop                          | noteOff                       |
+| [createGain][gain]            | createGainNode                |
+| [createDelay][delay]          | createDelayNode               |
+| [createScriptProcessor][proc] | createJavaScriptNode          |
 
 ## License
 
-Copyright (c) 2013 - 2014 [Shinnosuke Watanabe](https://github.com/shinnn) All rights reserved.
+Copyright (c) 2013 - 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
 
-Licensed under the [MIT license](http://opensource.org/licenses/mit-license.php).
+Licensed under [the MIT license](./LICENSE).
