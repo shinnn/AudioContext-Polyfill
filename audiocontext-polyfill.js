@@ -4,7 +4,7 @@ audiocontext-polyfill.js v0.1.1
 Licensed under the MIT license
 */
 
-(function(window, document){
+(function(window, undefined) {
   'use strict';
 
   window.AudioContext = window.AudioContext ||
@@ -99,4 +99,4 @@ Licensed under the MIT license
       return iOSCtx;
     };
   }
-}(window, document));
+}(window));
