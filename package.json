@@ -4,7 +4,7 @@
   "description": "Polyfill for 'AudioContext' object on Web Audio API",
   "main": "audiocontext-polyfill.js",
   "scripts": {
-    "test": "karma/bin/karma start --single-run"
+    "test": "karma start --single-run"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/shinnn/AudioContext-Polyfill",
   "devDependencies": {
-    "karma": "~0.11.12",
+    "karma": "^0.12.0",
     "karma-mocha": "~0.1.1",
     "karma-chai": "~0.1.0",
     "karma-coverage": "~0.2.0",
